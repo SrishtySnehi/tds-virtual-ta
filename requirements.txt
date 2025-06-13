@@ -4,3 +4,11 @@ sentence-transformers
 huggingface-hub
 python-dotenv
 tqdm
+
+# FastAPI app server
+fastapi
+uvicorn[standard]
+
+# Optional (if you use Together.ai)
+openai
+requests
