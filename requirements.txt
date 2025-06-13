@@ -1,0 +1,6 @@
+langchain>=0.1.0
+faiss-cpu
+sentence-transformers
+huggingface-hub
+python-dotenv
+tqdm
