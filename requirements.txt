@@ -12,3 +12,5 @@ uvicorn[standard]
 # Optional (if you use Together.ai)
 openai
 requests
+python-multipart
+pillow
