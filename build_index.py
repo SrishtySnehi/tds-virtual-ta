@@ -8,13 +8,15 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_core.documents import Document
+from sentence_transformers import SentenceTransformer
+
+model = SentenceTransformer("./all-MiniLM-L6-v2")
+
 
 # ------------------------------------------
 # 🔧 Initialize the embedding model
 # ------------------------------------------
-embeddings = HuggingFaceEmbeddings(
-    model_name="sentence-transformers/all-MiniLM-L6-v2"
-)
+
 
 # ------------------------------------------
 # 📥 Load JSONL files
