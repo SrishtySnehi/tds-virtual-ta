@@ -1,4 +1,5 @@
 import os
+from sentence_transformers import SentenceTransformer
 import shutil
 from pathlib import Path
 from langchain_community.vectorstores import FAISS
@@ -16,7 +17,8 @@ docs_path = "docs"  # Folder with your text documents
 
 # === INITIALIZE EMBEDDINGS ===
 print("🔠 Initializing embedding model...")
-embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
+model = SentenceTransformer("./all-MiniLM-L6-v2")
+
 
 # === LOAD OR BUILD VECTORSTORE ===
 if Path(faiss_path).exists():
