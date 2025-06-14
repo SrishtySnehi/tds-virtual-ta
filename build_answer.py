@@ -58,15 +58,15 @@ def get_answer(question: str) -> str:
     return result["result"]
 
 # === INTERACTIVE LOOP ===
-while True:
-    query = input("❓ Enter your question (or 'exit' to quit): ")
-    if query.lower() == "exit":
-        break
-    try:
-        result = qa_chain.invoke(query)
-        print("✅ Answer:", result["result"])
-        print("\n📚 Sources:")
-        for i, doc in enumerate(result["source_documents"]):
-            print(f" - [{i+1}] {doc.metadata.get('source', 'Unknown')}")
-    except Exception as e:
-        print("❌ Error:", str(e))
+# while True:
+#     query = input("❓ Enter your question (or 'exit' to quit): ")
+#     if query.lower() == "exit":
+#         break
+#     try:
+#         result = qa_chain.invoke(query)
+#         print("✅ Answer:", result["result"])
+#         print("\n📚 Sources:")
+#         for i, doc in enumerate(result["source_documents"]):
+#             print(f" - [{i+1}] {doc.metadata.get('source', 'Unknown')}")
+#     except Exception as e:
+#         print("❌ Error:", str(e))
